@@ -1,0 +1,9 @@
+spring:
+  application:
+    name: claim_service
+  devtools:
+    restart:
+      trigger-file: .reloadtrigger
+
+server:
+  port: 8081
