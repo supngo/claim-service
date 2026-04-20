@@ -8,4 +8,5 @@ import java.util.Optional;
 public interface ClaimRepository {
   Optional<Claim> findById(String claimId);
   List<Claim> findAllByCustomerId(String customerId);
+  Optional<Claim> update(String claimId, Claim claim);
 }

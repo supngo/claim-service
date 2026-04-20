@@ -12,7 +12,7 @@ import com.naturecode.claim_service.model.Claim;
 @Repository
 public class InMemoryClaimRepository implements ClaimRepository {
 
-  private final Map<String, Claim> store;
+  private final Map<String, Claim> store = new java.util.concurrent.ConcurrentHashMap<>();
 
   public InMemoryClaimRepository() {
     List<Claim> seed = List.of(
@@ -22,12 +22,21 @@ public class InMemoryClaimRepository implements ClaimRepository {
       Claim.builder().id("CLM-004").customerId("CUST-3").status("APPROVED").reason("Valid claim").build(),
       Claim.builder().id("CLM-005").customerId("CUST-4").status("DENIED").reason("Expired after 30 days").build()
     );
-    store = seed.stream().collect(Collectors.toMap(Claim::getId, c -> c));
+    store.putAll(seed.stream().collect(Collectors.toMap(Claim::getId, c -> c)));
   }
 
   @Override
   public Optional<Claim> findById(String claimId) {
     return Optional.ofNullable(store.get(claimId));
+  }
+
+  @Override
+  public Optional<Claim> update(String claimId, Claim claim) {
+    if (!store.containsKey(claimId)) {
+      return Optional.empty();
+    }
+    store.put(claimId, claim);
+    return Optional.of(claim);
   }
 
   @Override
