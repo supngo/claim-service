@@ -6,7 +6,7 @@ import com.naturecode.claim_service.model.Claim;
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
 
-@Mapper(componentModel = "spring")
+@Mapper
 public interface ClaimMapper {
 
   ClaimResponse toResponse(Claim claim);

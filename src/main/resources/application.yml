@@ -13,5 +13,15 @@ spring:
     redis:
       time-to-live: 600000
 
+logging:
+  level:
+    "[org.springframework.cache]": TRACE
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: caches
+
 server:
   port: 8081
