@@ -1,0 +1,27 @@
+2026-04-23 12:43:57.578 INFO  [restartedMain] c.n.c.ClaimServiceApplication - Starting ClaimServiceApplication using Java 21.0.10 with PID 37950 (/home/thom/Work/claim_service/build/classes/java/main started by thom in /home/thom/Work/claim_service)
+2026-04-23 12:43:57.578 DEBUG [restartedMain] c.n.c.ClaimServiceApplication - Running with Spring Boot v4.0.5, Spring v7.0.6
+2026-04-23 12:43:57.583 INFO  [restartedMain] c.n.c.ClaimServiceApplication - The following 1 profile is active: "prod"
+2026-04-23 12:43:57.792 INFO  [restartedMain] o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-04-23 12:43:57.796 INFO  [restartedMain] o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-04-23 12:43:59.256 INFO  [restartedMain] o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2026-04-23 12:43:59.266 INFO  [restartedMain] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2026-04-23 12:43:59.355 INFO  [restartedMain] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 49 ms. Found 0 Redis repository interfaces.
+2026-04-23 12:44:00.390 INFO  [restartedMain] o.s.boot.tomcat.TomcatWebServer - Tomcat initialized with port 8081 (http)
+2026-04-23 12:44:00.409 INFO  [restartedMain] o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8081"]
+2026-04-23 12:44:00.412 INFO  [restartedMain] o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-04-23 12:44:00.413 INFO  [restartedMain] o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/11.0.20]
+2026-04-23 12:44:00.475 INFO  [restartedMain] o.s.b.w.c.s.WebApplicationContextInitializer - Root WebApplicationContext: initialization completed in 2677 ms
+2026-04-23 12:44:00.899 TRACE [restartedMain] o.s.c.a.AnnotationCacheOperationSource - Adding cacheable method 'getClaimById' with operations: [Builder[public java.util.Optional com.naturecode.claim_service.service.ClaimService.getClaimById(java.lang.String)] caches=[claims] | key='#claimId' | keyGenerator='' | cacheManager='' | cacheResolver='' | condition='' | unless='' | sync='false']
+2026-04-23 12:44:00.902 TRACE [restartedMain] o.s.c.a.AnnotationCacheOperationSource - Adding cacheable method 'getClaimsByCustomerId' with operations: [Builder[public java.util.List com.naturecode.claim_service.service.ClaimService.getClaimsByCustomerId(java.lang.String)] caches=[claimsByCustomer] | key='#customerId' | keyGenerator='' | cacheManager='' | cacheResolver='' | condition='' | unless='' | sync='false']
+2026-04-23 12:44:00.904 TRACE [restartedMain] o.s.c.a.AnnotationCacheOperationSource - Adding cacheable method 'updateClaim' with operations: [Builder[public java.util.Optional com.naturecode.claim_service.service.ClaimService.updateClaim(java.lang.String,com.naturecode.claim_service.dto.ClaimRequest)] caches=[claims] | key='#claimId' | keyGenerator='' | cacheManager='' | cacheResolver='' | condition='',false,false, Builder[public java.util.Optional com.naturecode.claim_service.service.ClaimService.updateClaim(java.lang.String,com.naturecode.claim_service.dto.ClaimRequest)] caches=[claimsByCustomer] | key='#request.customerId' | keyGenerator='' | cacheManager='' | cacheResolver='' | condition='',false,false]
+2026-04-23 12:44:02.496 INFO  [restartedMain] o.s.b.a.e.web.EndpointLinksResolver - Exposing 1 endpoint beneath base path '/actuator'
+2026-04-23 12:44:02.653 INFO  [restartedMain] o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8081"]
+2026-04-23 12:44:02.695 INFO  [restartedMain] o.s.boot.tomcat.TomcatWebServer - Tomcat started on port 8081 (http) with context path '/'
+2026-04-23 12:44:02.744 INFO  [restartedMain] c.n.c.ClaimServiceApplication - Started ClaimServiceApplication in 6.067 seconds (process running for 7.219)
+2026-04-23 12:44:03.007 INFO  [RMI TCP Connection(2)-127.0.0.1] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-04-23 12:44:03.007 INFO  [RMI TCP Connection(2)-127.0.0.1] o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2026-04-23 12:44:03.010 INFO  [RMI TCP Connection(2)-127.0.0.1] o.s.web.servlet.DispatcherServlet - Completed initialization in 3 ms
+2026-04-23 12:45:06.414 TRACE [http-nio-8081-exec-3] o.s.c.interceptor.CacheInterceptor - Computed cache key 'CLM-003' for operation Builder[public java.util.Optional com.naturecode.claim_service.service.ClaimService.getClaimById(java.lang.String)] caches=[claims] | key='#claimId' | keyGenerator='' | cacheManager='' | cacheResolver='' | condition='' | unless='' | sync='false'
+2026-04-23 12:45:06.999 TRACE [http-nio-8081-exec-3] o.s.c.interceptor.CacheInterceptor - Cache entry for key 'CLM-003' found in cache(s) [claims]
+2026-04-23 12:45:22.030 INFO  [SpringApplicationShutdownHook] o.s.boot.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2026-04-23 12:45:22.040 INFO  [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown - Graceful shutdown complete
